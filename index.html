@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>深红档案 - 连载小说</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, 'PingFang SC', sans-serif; background: #0a0a0a; color: #e0d5c8; }
+header { background: linear-gradient(135deg, #1a0000 0%, #0d0d0d 100%); padding: 60px 20px; text-align: center; border-bottom: 2px solid #8b0000; }
+h1 { font-size: 2.2em; margin-bottom: 10px; background: linear-gradient(135deg, #8b0000, #ff4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.subtitle { color: #888; font-size: 0.95em; }
+.content { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+.chapter-list { list-style: none; }
+.chapter-list li { padding: 18px 20px; margin: 8px 0; background: #141414; border-left: 3px solid #8b0000; border-radius: 0 6px 6px 0; cursor: pointer; transition: all 0.3s; }
+.chapter-list li:hover { background: #1a0a0a; transform: translateX(5px); }
+.chapter-list li a { color: #e0d5c8; text-decoration: none; display: block; }
+.chapter-list li .badge { float: right; font-size: 0.75em; color: #8b0000; }
+footer { text-align: center; color: #555; padding: 40px; font-size: 0.85em; }
+</style></head>
+<body>
+<header><h1>深红档案</h1><p class="subtitle">都市异能 × 超自然悬疑 — 每日连载</p></header>
+<div class="content"><ul class="chapter-list" id="chapterList"><li>加载中...</li></ul></div>
+<footer><p>© 2026 深红档案 | AI Generated Novel | 每日06:00自动更新</p></footer>
+<script>
+fetch('chapters/index.json').then(r=>r.json()).then(data=>{
+  document.getElementById('chapterList').innerHTML = data.chapters.map((c,i)=> 
+    '<li><a href=\"chapters/' + c.file + '\">第' + (i+1) + '章：' + c.title + ' <span class=\"badge\">' + c.date + '</span></a></li>'
+  ).join('');
+}).catch(()=>{});
+</script></body></html>
