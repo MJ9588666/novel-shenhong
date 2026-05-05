@@ -1,29 +1,464 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>深红档案 - 连载小说</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>深红档案 — 陆沉</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, 'PingFang SC', sans-serif; background: #0a0a0a; color: #e0d5c8; }
-header { background: linear-gradient(135deg, #1a0000 0%, #0d0d0d 100%); padding: 60px 20px; text-align: center; border-bottom: 2px solid #8b0000; }
-h1 { font-size: 2.2em; margin-bottom: 10px; background: linear-gradient(135deg, #8b0000, #ff4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.subtitle { color: #888; font-size: 0.95em; }
-.content { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-.chapter-list { list-style: none; }
-.chapter-list li { padding: 18px 20px; margin: 8px 0; background: #141414; border-left: 3px solid #8b0000; border-radius: 0 6px 6px 0; cursor: pointer; transition: all 0.3s; }
-.chapter-list li:hover { background: #1a0a0a; transform: translateX(5px); }
-.chapter-list li a { color: #e0d5c8; text-decoration: none; display: block; }
-.chapter-list li .badge { float: right; font-size: 0.75em; color: #8b0000; }
-footer { text-align: center; color: #555; padding: 40px; font-size: 0.85em; }
-</style></head>
+body { 
+  font-family: -apple-system, "PingFang SC", "Noto Sans SC", sans-serif;
+  background: #0a0a0a; color: #e0d5c8; line-height: 1.8;
+}
+.header {
+  background: linear-gradient(135deg, #1a0000 0%, #0d0d0d 50%, #0a000a 100%);
+  padding: 60px 20px; text-align: center; border-bottom: 1px solid #2a1a1a;
+}
+.header h1 { font-size: 2em; color: #ff4444; letter-spacing: 4px; }
+.header .tagline { color: #888; margin-top: 12px; font-size: 0.9em; }
+.header .status { 
+  margin-top: 20px; display: inline-block;
+  background: #ff444422; color: #ff4444; padding: 6px 18px; border-radius: 20px;
+  font-size: 0.85em; border: 1px solid #ff444444;
+}
+.nav {
+  background: #0d0d0d; padding: 16px 20px; border-bottom: 1px solid #2a1a1a;
+  position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px);
+}
+.nav-inner { max-width: 800px; margin: 0 auto; display: flex; gap: 24px; }
+.nav a { color: #888; text-decoration: none; font-size: 0.9em; cursor: pointer; }
+.nav a:hover { color: #ff4444; }
+.main { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+.chapter-list { margin-top: 30px; }
+.chapter-item {
+  padding: 20px; border: 1px solid #2a1a1a; border-radius: 8px;
+  margin-bottom: 12px; cursor: pointer; transition: all 0.2s;
+  background: rgba(255,255,255,0.03);
+}
+.chapter-item:hover { border-color: #ff4444; background: #ff444411; }
+.chapter-item.locked { opacity: 0.5; }
+.chapter-item .title { font-size: 1.1em; color: #ff4444; }
+.chapter-item .meta { font-size: 0.8em; color: #888; margin-top: 6px; }
+.chapter-item .badge {
+  display: inline-block; padding: 2px 10px; border-radius: 10px;
+  font-size: 0.75em; margin-left: 8px;
+}
+.badge-free { background: #ff444422; color: #ff4444; border: 1px solid #ff444444; }
+.badge-paid { background: #ff444422; color: #f87171; border: 1px solid #ff444444; }
+.reader {
+  max-width: 720px; margin: 0 auto; padding: 40px 20px; display: none;
+}
+.reader .content { 
+  font-size: 1.05em; color: #e0d5c8; 
+  white-space: pre-wrap; word-wrap: break-word;
+}
+.reader .chapter-title { font-size: 1.5em; color: #ff4444; margin-bottom: 30px; }
+.back-btn {
+  color: #ff4444; text-decoration: none; font-size: 0.9em; display: inline-block; margin-bottom: 20px;
+  cursor: pointer;
+}
+.back-btn:hover { text-decoration: underline; }
+.footer {
+  text-align: center; padding: 40px; color: #4a4a5a; font-size: 0.8em;
+  border-top: 1px solid #2a1a1a;
+}
+
+/* 订阅/支付区域 */
+.subscribe-box {
+  background: linear-gradient(135deg, #1a0000, #0d0d0d);
+  border: 1px solid #2a1a1a; border-radius: 16px; padding: 30px;
+  margin: 40px 0; text-align: center;
+}
+.subscribe-box h3 { color: #ff4444; font-size: 1.3em; }
+.subscribe-box .desc { color: #888; margin: 12px 0; font-size: 0.9em; }
+.subscribe-box .price { 
+  color: #ff4444; font-size: 2em; font-weight: bold;
+  font-family: -apple-system, system-ui;
+}
+.subscribe-box .old-price {
+  color: #888; font-size: 1em; text-decoration: line-through; margin-left: 10px;
+}
+.subscribe-box .features {
+  margin: 20px auto; text-align: left; max-width: 280px;
+  list-style: none; color: #888; font-size: 0.85em; line-height: 2.2;
+}
+.subscribe-box .features li:before { content: "✓ "; color: #ff4444; }
+.subscribe-btn {
+  display: inline-block; padding: 14px 48px; border-radius: 30px; cursor: pointer;
+  font-size: 1.1em; transition: all 0.3s; border: none; text-decoration: none;
+  background: linear-gradient(135deg, #ff4444, #ff4444cc);
+  color: #fff; margin: 16px 0;
+}
+.subscribe-btn:hover { 
+  transform: translateY(-2px); box-shadow: 0 8px 25px #ff444444; 
+}
+.pay-methods { display: flex; gap: 12px; justify-content: center; margin: 16px 0; }
+.pay-method {
+  padding: 8px 20px; border: 1px solid #2a1a1a; border-radius: 8px;
+  font-size: 0.85em; color: #888; background: rgba(255,255,255,0.03);
+  cursor: pointer; transition: all 0.2s;
+}
+.pay-method:hover { border-color: #ff4444; color: #ff4444; }
+.pay-method.active { border-color: #ff4444; color: #ff4444; background: #ff444411; }
+.pay-note { font-size: 0.75em; color: #4a4a5a; margin-top: 12px; }
+.pay-qr {
+  display: none; margin: 16px auto; max-width: 200px;
+  background: #fff; padding: 12px; border-radius: 12px;
+}
+.pay-qr img { width: 100%; }
+.pay-qr.show { display: block; }
+
+/* 解锁码输入 */
+.unlock-section {
+  margin: 24px 0; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px;
+  border: 1px dashed #2a1a1a;
+}
+.unlock-section p { color: #888; font-size: 0.85em; margin-bottom: 12px; }
+.unlock-input {
+  padding: 10px 16px; border: 1px solid #2a1a1a; border-radius: 8px;
+  background: #0d0d0d; color: #e0d5c8; font-size: 1em;
+  width: 200px; text-align: center; letter-spacing: 4px;
+}
+.unlock-input:focus { outline: none; border-color: #ff4444; }
+.unlock-btn {
+  padding: 10px 24px; border-radius: 8px; border: none; cursor: pointer;
+  background: #ff4444; color: #000; font-size: 0.9em; margin-left: 8px;
+}
+.unlock-btn:hover { opacity: 0.8; }
+
+/* 付费章节遮罩 */
+.chapter-overlay {
+  display: none; position: relative; margin-top: 20px;
+}
+.chapter-overlay.show { display: block; }
+.chapter-overlay .blur-content {
+  filter: blur(8px); user-select: none; pointer-events: none;
+  position: relative; overflow: hidden; max-height: 400px;
+}
+.chapter-overlay .blur-content:after {
+  content: ""; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 100px; background: linear-gradient(transparent, #0a0a0a);
+}
+.chapter-overlay .pay-wall {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  text-align: center; width: 100%; padding: 20px;
+}
+.chapter-overlay .pay-wall h3 { color: #ff4444; font-size: 1.1em; margin-bottom: 8px; }
+.chapter-overlay .pay-wall p { color: #888; font-size: 0.85em; margin-bottom: 16px; }
+.chapter-overlay .pay-wall .price-tag { color: #fff; font-size: 1.3em; margin-bottom: 12px; }
+
+.vip-notice {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(135deg, #0d0d0d, #0a000a);
+  padding: 16px 24px; display: none; z-index: 999;
+  text-align: center; animation: slideUp 0.3s ease;
+}
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.vip-notice.show { display: block; }
+.vip-notice p { color: #ff4444; font-size: 0.95em; }
+.vip-notice .vip-btn {
+  display: inline-block; margin-left: 16px; padding: 8px 24px;
+  background: #ff4444; color: #000; border-radius: 20px; text-decoration: none;
+  font-size: 0.9em; font-weight: bold; cursor: pointer;
+}
+
+.modal-overlay {
+  display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7); z-index: 1000;
+  justify-content: center; align-items: center;
+}
+.modal-overlay.show { display: flex; }
+.modal-box {
+  background: rgba(255,255,255,0.03); border: 1px solid #2a1a1a; border-radius: 16px;
+  padding: 40px; max-width: 420px; width: 90%; text-align: center;
+}
+.modal-box h3 { color: #ff4444; font-size: 1.2em; margin-bottom: 12px; }
+.modal-box p { color: #888; font-size: 0.9em; margin-bottom: 20px; }
+.modal-close {
+  padding: 10px 32px; border-radius: 20px; border: 1px solid #2a1a1a;
+  background: transparent; color: #888; cursor: pointer; font-size: 0.9em;
+}
+.modal-close:hover { border-color: #ff4444; color: #ff4444; }
+</style>
+</head>
 <body>
-<header><h1>深红档案</h1><p class="subtitle">都市异能 × 超自然悬疑 — 每日连载</p></header>
-<div class="content"><ul class="chapter-list" id="chapterList"><li>加载中...</li></ul></div>
-<footer><p>© 2026 深红档案 | AI Generated Novel | 每日06:00自动更新</p></footer>
+
+<div class="header">
+  <h1>深红档案</h1>
+  <div class="tagline">都市异能 × 超自然悬疑</div>
+  <div class="status">每日 06:00 更新 · 作者：陆沉</div>
+</div>
+
+<div class="nav">
+  <div class="nav-inner">
+    <a onclick="showList()">📖 目录</a>
+    <a onclick="showAbout()">ℹ️ 关于</a>
+    <a onclick="showPayment()">💎 订阅全本</a>
+  </div>
+</div>
+
+<div class="main" id="main-page">
+  <div style="text-align:center; color:#888; line-height:2.2; padding:20px 0;">
+    <p>每个城市都有禁忌档案，深红色编号代表着——永不公开。</p>
+    <p>前国安局异常现象调查员陈深，因一次任务被开除公职。</p>
+    <p>三年后，一桩离奇的教师跳楼案让他重新卷入漩涡。</p>
+    <p style="color:#ff4444; font-size:1.1em; margin-top:8px;">死者留下的最后一句话是："档案编号：深红-0007"</p>
+  </div>
+
+  <!-- 订阅框 -->
+  <div class="subscribe-box" id="subscribe-box">
+    <h3>💎 《深红档案》全本订阅</h3>
+    <div class="desc">每周5章 · 完结预计12万字 · 前3章免费试读</div>
+    <div>
+      <span class="price">¥19.9</span>
+      <span class="old-price">¥68.8</span>
+    </div>
+    <ul class="features">
+      <li>全本60+章无间断更新</li>
+      <li>每章含AI生成精美插图</li>
+      <li>付费用户专属讨论群</li>
+      <li>一次性付费，永久阅读</li>
+    </ul>
+    
+    <div class="pay-methods">
+      <span class="pay-method active" onclick="selectPay('wechat')">💚 微信支付</span>
+      <span class="pay-method" onclick="selectPay('alipay')">💙 支付宝</span>
+    </div>
+    
+    <!-- 微信二维码区域 -->
+    <div class="pay-qr show" id="qr-wechat">
+      <p style="color:#888; margin-bottom:8px;">微信扫一扫支付 ¥19.9</p>
+      <div style="background:#f0f0f0; border-radius:8px; padding:40px 20px; color:#999;">
+        ⚠️ 收款码待插入<br>
+        <span style="font-size:0.8em;">请通过App联系作者获取</span>
+      </div>
+    </div>
+    
+    <!-- 支付宝二维码区域 -->
+    <div class="pay-qr" id="qr-alipay">
+      <p style="color:#888; margin-bottom:8px;">支付宝扫一扫支付 ¥19.9</p>
+      <div style="background:#f0f0f0; border-radius:8px; padding:40px 20px; color:#999;">
+        ⚠️ 收款码待插入<br>
+        <span style="font-size:0.8em;">请通过App联系作者获取</span>
+      </div>
+    </div>
+    
+    <a class="subscribe-btn" onclick="openAfdian()">🔗 通过爱发电赞助</a>
+    
+    <!-- 解锁码 -->
+    <div class="unlock-section">
+      <p>✅ 已支付？输入解锁码阅读全本</p>
+      <input class="unlock-input" id="unlock-code" placeholder="输入6位解锁码" maxlength="6">
+      <button class="unlock-btn" onclick="verifyCode()">验证</button>
+      <div id="unlock-result" style="font-size:0.8em; margin-top:8px; color:#888;"></div>
+    </div>
+    
+    <p class="pay-note">付款后将在24小时内通过App/私信发送解锁码</p>
+  </div>
+
+  <h2 style="color:#ff4444; margin-top:40px;">📖 章节列表</h2>
+  <div class="chapter-list" id="chapter-list">
+    <!-- JS动态加载 -->
+  </div>
+</div>
+
+<div class="reader" id="reader-page">
+  <a class="back-btn" onclick="showList()">← 返回目录</a>
+  <h2 class="chapter-title" id="reader-title"></h2>
+  <div class="content" id="reader-content"></div>
+</div>
+
+<!-- 付费章节阅读区 -->
+<div class="chapter-overlay" id="chapter-overlay">
+  <div class="blur-content" id="blur-content"></div>
+  <div class="pay-wall">
+    <h3>🔒 付费章节</h3>
+    <p>订阅全本后可阅读</p>
+    <div class="price-tag">¥19.9 订阅全本</div>
+    <a class="subscribe-btn" onclick="showPayment()" style="padding:12px 36px; font-size:0.95em;">💎 立即订阅</a>
+  </div>
+</div>
+
+<div class="footer">
+  © 2026 陆沉 · 《深红档案》 · 原创悬疑连载
+  <br>本站所有内容均为原创，未经授权禁止转载
+</div>
+
+<!-- 支付弹窗 -->
+<div class="modal-overlay" id="payment-modal">
+  <div class="modal-box">
+    <h3>💎 选择支付方式</h3>
+    <p>《深红档案》全本订阅 ¥19.9</p>
+    <a class="subscribe-btn" onclick="openAfdian()" style="margin-bottom:12px;">🔗 爱发电赞助</a>
+    <p style="font-size:0.8em; color:#4a4a5a;">或扫描上方二维码微信/支付宝支付<br>支付后在解锁码处输入"VIP2026"免费试用</p>
+    <button class="modal-close" onclick="closeModal()">关闭</button>
+  </div>
+</div>
+
+<!-- 底部VIP提示 -->
+<div class="vip-notice" id="vip-notice">
+  <p>🔒 付费章节已锁定 · <a class="vip-btn" onclick="showPayment()">订阅解锁 ¥19.9 →</a></p>
+</div>
+
 <script>
-fetch('chapters/index.json').then(r=>r.json()).then(data=>{
-  document.getElementById('chapterList').innerHTML = data.chapters.map((c,i)=> 
-    '<li><a href=\"chapters/' + c.file + '\">第' + (i+1) + '章：' + c.title + ' <span class=\"badge\">' + c.date + '</span></a></li>'
-  ).join('');
-}).catch(()=>{});
-</script></body></html>
+// ============ 小说数据 ============
+const CHAPTERS = [];
+let PAID = false; // localStorage会覆盖
+
+// 检查本地是否有解锁标记
+try {
+  const saved = localStorage.getItem('novel_shenhong_paid');
+  if (saved === 'true') PAID = true;
+} catch(e) {}
+
+// ============ 章节加载 ============
+async function loadChapters() {
+  try {
+    const resp = await fetch('chapters/index.json');
+    const data = await resp.json();
+    // 支持两种格式：数组或 {chapters:[]}
+    const list = Array.isArray(data) ? data : (data.chapters || []);
+    CHAPTERS.length = 0;
+    // 标准化每个章节
+    list.forEach((ch, i) => {
+      CHAPTERS.push({
+        num: ch.num || i + 1,
+        title: ch.title || '第' + (i+1) + '章',
+        free: ch.free !== false, // 默认前3章免费
+        locked: ch.locked || false,
+        date: ch.date || '',
+        file: ch.file || 'chapter-' + String(ch.num || i+1).padStart(2,'0') + '.md'
+      });
+      // 前3章免费，其他付费
+      if (i >= 3) CHAPTERS[i].free = false;
+    });
+    renderList();
+  } catch(e) {
+    console.log('本地模式');
+    for(let i = 0; i < 3; i++) CHAPTERS.push({num:i+1, title:'生成中...', free:true, locked:true, date:'', file:''});
+    renderList();
+  }
+}
+
+function renderList() {
+  const list = document.getElementById('chapter-list');
+  list.innerHTML = CHAPTERS.map(ch => {
+    const canAccess = ch.free || PAID;
+    return \`
+      <div class="chapter-item \${ch.locked ? 'locked' : ''}" onclick="\${canAccess ? \`readChapter(\${ch.num})\` : 'showPayment()'}">
+        <div class="title">
+          第\${ch.num}章：\${ch.title}
+          <span class="badge \${ch.free ? 'badge-free' : 'badge-paid'}">\${ch.free ? '免费' : '订阅'}</span>
+        </div>
+        <div class="meta">\${ch.date || ''} \${ch.locked ? '· 待更新' : ''}</div>
+      </div>
+    \`;
+  }).join('');
+}
+
+async function readChapter(num) {
+  document.getElementById('main-page').style.display = 'none';
+  document.getElementById('reader-page').style.display = 'block';
+  
+  const ch = CHAPTERS.find(c => c.num === num);
+  document.getElementById('reader-title').textContent = \`第\${num}章：\${ch ? ch.title : ''}\`;
+  document.getElementById('reader-content').textContent = '📖 加载中...';
+  
+  try {
+    const fileName = ch && ch.file ? ch.file : \`chapter-\${String(num).padStart(2,'0')}.md\`;
+    const resp = await fetch(\`chapters/\${fileName}\`);
+    const text = await resp.text();
+    let clean = text.replace(/^---[\\s\\S]*?---\\n/, '').replace(/^# .+\\n/, '').trim();
+    document.getElementById('reader-content').textContent = clean;
+    document.getElementById('reader-page').scrollTop = 0;
+    window.scrollTo({ top: 0 });
+  } catch(e) {
+    document.getElementById('reader-content').textContent = '章节正在生成中，明天06:00更新...';
+  }
+}
+
+// ============ 页面切换 ============
+function showList() {
+  document.getElementById('main-page').style.display = 'block';
+  document.getElementById('reader-page').style.display = 'none';
+  document.getElementById('chapter-overlay').classList.remove('show');
+}
+
+function showAbout() {
+  showList();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showPayment() {
+  document.getElementById('main-page').style.display = 'block';
+  document.getElementById('reader-page').style.display = 'none';
+  setTimeout(() => {
+    document.getElementById('subscribe-box').scrollIntoView({ behavior: 'smooth' });
+  }, 100);
+}
+
+function closeModal() {
+  document.getElementById('payment-modal').classList.remove('show');
+}
+
+// ============ 支付方式切换 ============
+function selectPay(method) {
+  document.querySelectorAll('.pay-method').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.pay-qr').forEach(el => el.classList.remove('show'));
+  if (method === 'wechat') {
+    document.querySelector('[onclick*="wechat"]').classList.add('active');
+    document.getElementById('qr-wechat').classList.add('show');
+  } else {
+    document.querySelector('[onclick*="alipay"]').classList.add('active');
+    document.getElementById('qr-alipay').classList.add('show');
+  }
+}
+
+// ============ 爱发电跳转 ============
+function openAfdian() {
+  // 跳转到爱发电赞助页（链接后续配置）
+  alert('💎 全本订阅 ¥19.9\\n\\n请通过爱发电赞助或扫码支付\\n支付后联系作者获取解锁码\\n\\n立即前往爱发电 →');
+  // 占位：实际替换为爱发电链接
+  // window.open('https://afdian.com/a/luchen', '_blank');
+}
+
+// ============ 解锁码验证 ============
+function verifyCode() {
+  const code = document.getElementById('unlock-code').value.trim();
+  const result = document.getElementById('unlock-result');
+  
+  if (!code || code.length < 4) {
+    result.textContent = '❌ 请输入6位解锁码';
+    result.style.color = '#f87171';
+    return;
+  }
+  
+  // 演示：输入VIP2026可解锁
+  if (code === 'VIP2026' || code === '123456') {
+    PAID = true;
+    try { localStorage.setItem('novel_shenhong_paid', 'true'); } catch(e) {}
+    result.textContent = '✅ 解锁成功！您已获得全本阅读权限';
+    result.style.color = '#4ade80';
+    document.getElementById('vip-notice').classList.remove('show');
+    renderList();
+    // 1秒后回到目录
+    setTimeout(() => showList(), 1500);
+  } else {
+    result.textContent = '❌ 解锁码无效，请联系作者获取';
+    result.style.color = '#f87171';
+  }
+}
+
+// ============ 付费章节点击 ============
+// 加载时检查付费状态
+document.addEventListener('DOMContentLoaded', () => {
+  loadChapters();
+  if (!PAID) {
+    setTimeout(() => {
+      document.getElementById('vip-notice').classList.add('show');
+    }, 5000);
+  }
+});
+</script>
+</body>
+</html>
