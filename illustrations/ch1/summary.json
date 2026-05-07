@@ -1,0 +1,25 @@
+{
+  "chapter": 1,
+  "total": 3,
+  "success": 3,
+  "images": [
+    {
+      "label": "Rainy Street",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch1/Rainy Street.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/31/20260507/6e8aa136/e8ff5a9c-8353-4c29-bedf-bfc7d21c1f2f_0.png?Expires=1778229766&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=j1c16qBsqCb1vdcvaL1d3IZBIV0%3D",
+      "prompt": "A rain-soaked neo-noir city street at night, blurred neon signs bleeding through wet glass, empty pavement reflecting distorted headlights, a lone police officer in a trench coat stands silhouetted beside a parked sedan; cyberpunk style, cinematic wide shot with shallow depth of field, moody chiaroscuro lighting dominated by cool blues and sickly amber glows, rain streaks visible on lens, atmospheric haze, high-detail texture, volumetric fog."
+    },
+    {
+      "label": "Archive Office",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch1/Archive Office.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/4a/20260507/6e8aa136/5cc3c0fd-5deb-4bcd-911f-0afc93d42252_0.png?Expires=1778229799&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=7zTHM905sD6OIIqgs1iSwdf%2F2LM%3D",
+      "prompt": "Dim office interior lit only by a flickering desk lamp and the cold glow of a laptop screen showing fragmented surveillance footage; 'Deep Crimson Archive' file folder lies open, revealing a photo of a smiling young woman and glitching video stills; sci-fi thriller style, medium close-up composition from slightly low angle, dramatic sidelight casting long shadows, green-tinted monitor light contrasting warm lamplight, rain-streaked window in background, grainy film texture."
+    },
+    {
+      "label": "Broken Pavilion",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch1/Broken Pavilion.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/c9/20260507/6e8aa136/511e7ef5-43b1-491f-a8d9-e0f3575c9da3_0.png?Expires=1778229829&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=uOU%2BDcMRcSwtIaOZYwhQGKVcrQI%3D",
+      "prompt": "Abandoned park pavilion at midnight under torrential rain: broken wooden beams, shattered lantern glass scattered near a puddle reflecting fractured light, a torn black fabric fragment caught on a rusted bench; anime-style cinematic horror atmosphere, low-angle shot emphasizing looming trees and oppressive darkness, bioluminescent mist clinging to ground, single dim spotlight from distant broken streetlamp casting long jagged shadows, rain particles rendered sharply, eerie cyan and charcoal palette."
+    }
+  ]
+}
