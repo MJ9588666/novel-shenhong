@@ -1,0 +1,25 @@
+{
+  "chapter": 2,
+  "total": 3,
+  "success": 3,
+  "images": [
+    {
+      "label": "StreetCornerAmbush",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch2/StreetCornerAmbush.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/63/20260508/6e8aa136/dd015e2c-f802-475e-8684-23e6a4cbf80f_0.png?Expires=1778304622&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=nrPiTi9zP1TeC7xPISc1z%2B9kKL0%3D",
+      "prompt": "A rain-slicked urban street corner at night, neon signs flicker weakly in the distance, casting violet and cyan reflections on wet asphalt. A woman in a wind-blown coat stands frozen, staring into deep shadow where a tall figure in a tattered black hooded cloak emerges—face obscured by an ornate silver mask, eyes glowing faintly amber. Low-angle composition, cinematic depth of field, dramatic chiaroscuro lighting with stark contrast between cold ambient glow and warm emergency-light spill from a distant café. Cyberpunk style, hyper-detailed textures, moody atmospheric haze."
+    },
+    {
+      "label": "OccultApartmentClue",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch2/OccultApartmentClue.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/fb/20260508/6e8aa136/6473e19c-5050-4e58-945f-45a38a5927fc_0.png?Expires=1778304647&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=Nf9OE8W%2FvU%2Bo3wuIJ3y57BgMtyc%3D",
+      "prompt": "Dim, claustrophobic interior of a run-down apartment: peeling wallpaper, overturned furniture, and occult symbols drawn in chalk and dried ink on cracked plaster walls. A flashlight beam cuts diagonally across the frame, illuminating floating dust and a close-up of a trembling hand holding a torn, aged map covered in alchemical sigils and cryptic coordinates. Shallow depth of field, high-contrast noir lighting with deep shadows pooling in corners. Sci-fi thriller style, realistic rendering, gritty film grain, muted desaturated palette punctuated by faint bioluminescent glyphs pulsing softly on the wall."
+    },
+    {
+      "label": "AbandonedChurchMap",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch2/AbandonedChurchMap.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/32/20260508/6e8aa136/f99f338d-0fc8-40df-a2c9-59ac727102c7_0.png?Expires=1778304680&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=utSbqiSk9A7fSM8BYXY9GwQj390%3D",
+      "prompt": "An abandoned neo-gothic church at twilight—broken stained-glass windows cast fractured colored light onto crumbling stone floors. In the center, a lone detective kneels beside a rusted iron lectern holding an open journal with glowing circuit-like ink sketches. Faint holographic projections of shifting constellations and binary glyphs hover mid-air. Wide shot with symmetrical composition, volumetric fog, cool blue-violet ambient light mixed with eerie green data-glow accents. Anime-style sci-fi aesthetic, sharp linework, luminous detail, atmospheric perspective, subtle lens flare."
+    }
+  ]
+}
