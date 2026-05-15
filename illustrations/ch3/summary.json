@@ -4,22 +4,22 @@
   "success": 3,
   "images": [
     {
-      "label": "silent_rain_exterior",
-      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch3/silent_rain_exterior.png",
-      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/b8/20260515/6e8aa136/397d5b04-c0d3-413c-b46a-157976d28fb7_0.png?Expires=1778905489&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=z3W1vQRit2rumdctvhLAE7Lkcw8%3D",
-      "prompt": "A lone man in a rain-soaked trench coat stands at the base of a six-story gray brick apartment building under a silent downpour; rain glistens on his hair and shoulders but produces no splashes or ripples; muted foggy atmosphere, wet pavement reflecting dim sodium-vapor streetlights; cinematic sci-fi realism, shallow depth of field, medium-wide shot, chiaroscuro lighting with cool blue-gray tones and subtle cobalt glint on his left wrist scar; raindrops frozen mid-air in visual suggestion of acoustic absence."
+      "label": "alley_confrontation",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch3/alley_confrontation.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/e2/20260515/6e8aa136/970d1ce5-c92a-420b-86fe-a50997b96f07_0.png?Expires=1778905563&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=EQ%2BwqrzYPxbFNKnTl81IEuVhNpA%3D",
+      "prompt": "A dim, rain-slicked alley at night, neon signs flicker with corrupted glyphs in Chinese-inspired script; a terrified man in worn civilian clothes backs against graffiti-covered brick wall, lit by cold blue bioluminescent streetlights and pulsing red emergency glow from a distant drone; cyberpunk style, medium close-up, shallow depth of field, cinematic chiaroscuro lighting with high contrast and volumetric fog."
     },
     {
-      "label": "ultrasound_scanner_door",
-      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch3/ultrasound_scanner_door.png",
-      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/19/20260515/6e8aa136/50147ab0-ae57-44b9-9ea2-13bd455fdf4b_0.png?Expires=1778905516&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=ZQ4a0SUqeCbyYTGMBIqg7Yv8OV4%3D",
-      "prompt": "Close-up of a silver-gray handheld device with engraved closed-eye emblem and rotating gear pupil, pressed against a weathered wooden doorframe; faint幽蓝 pulse glowing at its sensor edge; dim hallway light casts long shadows, peeling paint and cracked linoleum floor visible; cyberpunk sci-fi aesthetic, macro perspective, high-detail metallic texture, low-key lighting with cool cyan accent on the device's active frequency line, shallow focus isolating the gadget against blurred door crack revealing sliver of white interior light."
+      "label": "occult_apartment",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch3/occult_apartment.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/9d/20260515/6e8aa136/40f3a5be-3f6a-4cbb-a261-a26305e80998_0.png?Expires=1778905596&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=v%2FRQOpOjY%2FrfPgeJVo5eCM98mgM%3D",
+      "prompt": "Cluttered apartment interior bathed in sickly green monitor light and faint UV glow; walls covered in hand-drawn occult symbols, arcane diagrams, and fragmented AI circuit schematics overlapping like neural lace; a lone investigator in tactical trench coat examines scattered ritual notes under focused desk lamp beam; sci-fi noir style, wide-angle composition with diagonal tension, low-key lighting, deep shadows, subtle lens flare from screen reflections."
     },
     {
-      "label": "dry_apartment_interior",
-      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch3/dry_apartment_interior.png",
-      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/36/20260515/6e8aa136/f29a1802-4c97-4659-9820-a29609b956e8_0.png?Expires=1778905541&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=98qK2wVFsWbhj0p%2F4MlDQ%2BohPyU%3D",
-      "prompt": "Interior of a meticulously tidy apartment: beige fabric sofa, vintage record player with suspended tonearm above black vinyl, faint snow cedar scent implied by soft ambient haze; shallow-focus wide shot from doorway, pale oak floor dry despite torrential rain outside visible through fogged window; sci-fi realism with melancholic stillness, diffused fluorescent ceiling light casting even cool-white illumination, subtle cobalt shimmer on wrist scar reflected in dark record surface, dust motes frozen in air suggesting temporal suspension."
+      "label": "hooded_figure",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch3/hooded_figure.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/1d/20260515/6e8aa136/82ff3825-09ec-4de0-abfe-9046da0f2e1c_0.png?Expires=1778905629&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=ctplmufqw77xwdbV00R5Ufj2zBU%3D",
+      "prompt": "A shadowy figure in a flowing black hooded cloak stands at the edge of a derelict subway tunnel, facing away; glowing violet irises visible through an ornate bronze mask, faint energy trails curling from fingertips toward floating holographic glyphs; background dissolves into data static and fragmented surveillance footage; anime-style sci-fi, centered vertical composition, dramatic backlighting from unseen source, high-detail linework, atmospheric haze, cool purple-black color grade."
     }
   ]
 }
