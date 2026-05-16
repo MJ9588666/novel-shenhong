@@ -1,0 +1,19 @@
+{
+  "chapter": 4,
+  "total": 3,
+  "success": 2,
+  "images": [
+    {
+      "label": "main-cover-ch4",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch4/main-cover-ch4.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/dc/20260516/6e8aa136/43668687-f44e-4d3d-b77d-a5e0f23e302d_0.png?Expires=1778976248&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=TOfjqvvIFgM961e86ga27kOqkIU%3D",
+      "prompt": "Chinese sci-fi novel illustration, # 第4章  ### 第四章：山洞的秘密  我们进入了山洞，四周的空气似乎变得异常沉重。手电筒的光束在黑暗中划出一道道光柱，照亮了那些奇怪的符号和图案。这些符号看起来非常古老，仿佛是某种古老仪式的一部 cyberpunk aesthetic, holographic screens, neural network visualization, dark atmosphere, blue and purple neon lighting, cinematic composition, 4k detailed digital art, anime style"
+    },
+    {
+      "label": "silence-ch4",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch4/silence-ch4.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/28/20260516/6e8aa136/ff9798e9-2dfb-4c09-a57b-1ee35575fb82_0.png?Expires=1778980244&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=Nerf0Uy4WSsbEem37uuJU7mArtA%3D",
+      "prompt": "global network shutdown scene, all screens going dark, world map with fading connection dots, dramatic lighting, dark blue atmosphere, sci-fi thriller mood, cinematic wide shot, detailed digital illustration"
+    }
+  ]
+}
