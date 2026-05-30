@@ -1,0 +1,25 @@
+{
+  "chapter": 5,
+  "total": 3,
+  "success": 3,
+  "images": [
+    {
+      "label": "Surgical_Chamber",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch5/Surgical_Chamber.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/0b/20260531/6e8aa136/6afa1ac1-b616-4d77-a029-0d0a21534e25_0.png?Expires=1780269371&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=MuVX7NQcDluiA%2F%2F8N7L7XYSnWgg%3D",
+      "prompt": "A dimly lit underground chamber with cracked concrete walls, flickering neon-blue emergency lights casting long shadows; a pale, bound woman (Lin Xiao) lies on a rusted surgical table, IV tubes snaking from her arms, her eyes wide with silent terror; cyberpunk/sci-fi style, cinematic low-angle composition, high contrast chiaroscuro lighting with cold ambient glow and blood-red accent highlights on metal surfaces."
+    },
+    {
+      "label": "Lab_Report",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch5/Lab_Report.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/fd/20260531/6e8aa136/aaac2fd7-993a-4b51-82b5-d1d125080312_0.png?Expires=1780269392&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=mMKb9V0RFPG5zD357zPpgYA6GbI%3D",
+      "prompt": "Close-up of a trembling hand holding a printed lab report titled 'Subject 001' in faded ink; background blurred to reveal faint glimpses of occult symbols scrawled on file margins and a drop of dried blood on the paper edge; sci-fi noir style, shallow depth-of-field composition, moody top-down lighting with stark shadow gradients and desaturated teal-and-ash color palette."
+    },
+    {
+      "label": "Factory_Ritual",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch5/Factory_Ritual.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/73/20260531/6e8aa136/c2c8ee8e-9f96-4246-a3f2-d1a964fc1d70_0.png?Expires=1780269424&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=7jt3nYIsejnaqsbLWVpkkqfwcKo%3D",
+      "prompt": "Abandoned industrial factory at night: shattered skylights leak moonlight onto dusty machinery; silhouettes of armed operatives crouch behind corroded conveyor belts, aiming toward a distant ritual circle glowing with unstable violet energy; anime-meets-cyberpunk style, wide dynamic composition, dramatic backlighting from the anomaly, deep indigo shadows, volumetric dust particles, cinematic tension."
+    }
+  ]
+}
