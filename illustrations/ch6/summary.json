@@ -1,0 +1,25 @@
+{
+  "chapter": 6,
+  "total": 3,
+  "success": 3,
+  "images": [
+    {
+      "label": "CorridorRevelation",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch6/CorridorRevelation.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/64/20260617/3a46c997/2f4493c3-e582-450c-bbae-a85766c95892_0.png?Expires=1781764434&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=KDnYY76JsyD74D8V9eImSMp1koo%3D",
+      "prompt": "A rain-soaked, dimly lit hospital corridor at 3:17 AM; flickering fluorescent ceiling lights cast stuttering shadows; a lone forensic investigator in a dark trench coat stands before an open morgue drawer, revealing a corpse with a faintly glowing crimson vertical line pulsing on its chest; cyberpunk/sci-fi style, tight medium shot, high-contrast chiaroscuro lighting with cold blue ambient tones and localized warm red bioluminescent glow from the 'bloodline'; shallow depth of field, cinematic realism, volumetric mist and rain-streaked glass in background."
+    },
+    {
+      "label": "EarFissure",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch6/EarFissure.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/b1/20260617/3a46c997/6fbb18bc-cc9a-4b82-b649-0cd8ab9e2a35_0.png?Expires=1781764455&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=ftEs7l3KwxW7REWp3%2BVcHM4WOyY%3D",
+      "prompt": "Extreme close-up of a man's left ear and nape: a 3cm dried dark-brown bloodline fissure pulses faintly beneath pale skin, surrounded by subtle moisture droplets and microscopic crystalline residue; sci-fi medical thriller style, macro photography composition, dramatic side-lit illumination with cool clinical white light and a soft internal ruby glow emanating from the fissure; shallow focus, hyper-detailed skin texture, visible capillaries and micro-hair follicles, sterile metallic background blur suggesting a morgue wall."
+    },
+    {
+      "label": "TwelveLines",
+      "filepath": "/Users/jiangjun/xianyu-products/novel-shenhong/illustrations/ch6/TwelveLines.png",
+      "url": "https://dashscope-7c2c.oss-accelerate.aliyuncs.com/1d/e6/20260617/3a46c997/4e0abdec-0e20-4008-a85a-213a6cdab657_0.png?Expires=1781764484&OSSAccessKeyId=LTAI5tPxpiCM2hjmWrFXrym1&Signature=YnEGdbGyRd62QzA0AjivtDROhSI%3D",
+      "prompt": "Twelve morgue drawers simultaneously ajar in a sterile steel-lined morgue; each exposed corpse lies supine with a uniquely sized but identically vibrating crimson bioluminescent line across the sternum; overhead industrial lights blaze harshly, casting sharp black shadows; cyberpunk/sci-fi style, wide-angle symmetrical composition, stark fluorescent lighting mixed with rhythmic 12.7Hz pulse-glow from all lines; shallow DOF emphasizing front three corpses, background drawers receding into cool gray gradient; silent tension, no human figures visible, only humming machinery glow reflected on stainless surfaces."
+    }
+  ]
+}
